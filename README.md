@@ -22,3 +22,8 @@ The main objectives of this research are:
 - Brute-force attacks were performed on ZIP files with passwords of lengths 4, 5, and 6 characters using different character sets: lowercase, lowercase + uppercase, letters + numbers, and letters + numbers + symbols.  
 - Custom Python scripts were used to implement both sequential and parallel brute-force attacks.  
 - Execution times and combinations processed per second were recorded and analyzed. 
+
+## How to Use the Scripts
+1. Download or copy the Python scripts from the `python_codes/` folder.
+2. Configure any parameters you want directly in the code (e.g., password length, character set, number of attempts).
+3. Run the script using Python.   
