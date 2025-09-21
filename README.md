@@ -8,7 +8,15 @@ The repository includes:
 - The final research document.  
 - Python source code for brute-force operations and combination counting.  
 - Experimental datasets and tables detailing execution times and combinations per second.  
-- Supporting figures and charts used in the analysis.  
+- Supporting figures and charts used in the analysis.
+
+  ## Repository Structure
+The repository is organized as follows:
+
+- **`data_tables/`**: Contains all tables with results of password cracking tests, including variations by password length and character sets.
+- **`docs/`**: Includes reports and documents detailing the methodology, theoretical background, and analysis of results.
+- **`python_codes/`**: Python scripts used to perform the password cracking simulations and generate the tables.
+- **`used_zip_files/`**: Example ZIP files used for testing the scripts.
 
 ## Objectives
 
