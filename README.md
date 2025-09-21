@@ -35,3 +35,18 @@ The main objectives of this research are:
 1. Download or copy the Python scripts from the `python_codes/` folder.
 2. Configure any parameters you want directly in the code (e.g., password length, character set, number of attempts).
 3. Run the script using Python.   
+
+## Prerequisites
+
+- Python 3.6 or higher
+
+No external Python libraries are required; all dependencies are from the standard library:
+- zipfile
+- itertools
+- string
+- multiprocessing
+- sys
+- datetime
+- os
+
+You do not need to install any additional packages to run the provided scripts.
