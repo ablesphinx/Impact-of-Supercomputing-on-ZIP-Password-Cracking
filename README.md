@@ -10,6 +10,8 @@ The repository includes:
 - Experimental datasets and tables detailing execution times and combinations per second.  
 - Supporting figures and charts used in the analysis.
 
+To see the final document of the investigation, go to docs/draft_research_document_(catalan).pdf.
+
   ## Repository Structure
 The repository is organized as follows:
 
