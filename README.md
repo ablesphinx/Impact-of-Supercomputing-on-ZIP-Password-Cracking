@@ -16,7 +16,7 @@ To see the final document of the investigation, go to the docs folder.
 The repository is organized as follows:
 
 - **`data_tables/`**: Contains all tables with results of password cracking tests, including variations by password length and character sets.
-- **`docs/`**: Includes reports and documents detailing the methodology, theoretical background, and analysis of results.
+- **`docs/`**: Includes the final research documents, detailing the methodology, theoretical background, and analysis of results.
 - **`python_codes/`**: Python scripts used to perform the password cracking simulations and generate the tables.
 - **`used_zip_files/`**: Example ZIP files used for testing the scripts.
 
