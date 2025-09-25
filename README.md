@@ -1,70 +1,85 @@
 # Analysis of the Influence of Supercomputing on ZIP File Password Cracking
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 ## Overview
+This repository contains the complete work of a research project investigating how parallel computing and supercomputing resources impact the efficiency of brute-force attacks against encrypted ZIP files. The study compares:
 
-This repository contains the complete work for a research project investigating the impact of parallel computing and supercomputing resources on the efficiency of brute-force attacks against encrypted ZIP files. The study compares sequential execution, limited-core parallelization on a personal computer, and massive parallelization on the Marenostrum 5 supercomputer.  
+- Sequential execution
+- Limited-core parallelization on a personal computer
+- Massive parallelization on the Marenostrum 5 supercomputer
 
-The repository includes:  
-- The final research document.  
-- Python source code for brute-force operations and combination counting.  
-- Experimental datasets and tables detailing execution times and combinations per second.  
-- Supporting figures and charts used in the analysis.
+The repository includes:
 
-To see the final document of the investigation, go to the docs folder.
+- Final research document (`docs/`)
+- Python scripts for brute-force operations and combination counting (`python_codes/`)
+- Experimental datasets and tables with execution times and combinations per second (`data_tables/`)
+- Example ZIP files used for testing (`used_zip_files/`)
 
-  ## Repository Structure
-The repository is organized as follows:
+## Repository Structure
 
-- **`data_tables/`**: Contains all tables with results of password cracking tests, including variations by password length and character sets.
-- **`docs/`**: Includes the final research documents, detailing the methodology, theoretical background, and analysis of results.
-- **`python_codes/`**: Python scripts used to perform the password cracking simulations and generate the tables.
-- **`used_zip_files/`**: Example ZIP files used for testing the scripts.
+- `data_tables/` Results of password cracking tests and other tables
+- `docs/ Final` Final research documents
+- `python_codes/` Python scripts for experiments
+- `used_zip_files/` Example ZIP files for testing
 
 ## Objectives
 
-The main objectives of this research are:  
-1. Quantify the effect of parallelization on the time required to crack passwords.  
-2. Identify the impact of password length and character set complexity on security.  
-3. Provide a practical comparison of brute-force performance across different computational environments.  
+1. Quantify the effect of parallelization on password cracking time.
+2. Identify the impact of password length and character set complexity on security.
+3. Provide a practical comparison of brute-force performance across different computational environments.
 
-## Methodology
+## Key Findings
 
-- Brute-force attacks were performed on ZIP files with passwords of lengths 4, 5, and 6 characters using different character sets: lowercase, lowercase + uppercase, letters + numbers, and letters + numbers + symbols.  
-- Custom Python scripts were used to implement both sequential and parallel brute-force attacks.  
-- Execution times and combinations processed per second were recorded and analyzed.
+### Parallelization
+Parallelization significantly improves brute-force performance. Although individual worker speed decreases with more workers, total throughput increases noticeably.
+This demonstrates scalability, allowing faster attacks on complex passwords when using massive parallel computing resources like Marenostrum 5 (access restricted to authorized users).
 
-## Conclusions
-From the conducted experiments, several conclusions can be drawn from both a technical and cybersecurity perspective.
+### Password Length and Character Variety
+- Longer passwords combining uppercase, lowercase, numbers, and symbols are significantly more resistant to brute-force attacks.
+- Short passwords or those with a limited character set are more vulnerable.
+- Password position in the search space matters; for example, passwords starting with '0' when using only numbers are tested first, making them easier to crack early.
+- Combinations per second remained stable across different password complexities and lengths, showing predictable performance.
 
-  #### Parallelization: 
-The tests confirmed that parallelization significantly improves brute-force performance. While individual worker speed decreases, the total throughput increases noticeably with more workers. This demonstrates that such a strategy is scalable and allows faster attacks on complex passwords when access to computers with massive parallelization capacity is available. This result fulfills the objective of analyzing the impact of parallelization on decryption time. It is important to note that access to supercomputers like Marenostrum is currently restricted to authorized users, so malicious use is not a real threat to ordinary users’ password security.
+### Alphabet Complexity
+Larger and more complex character sets (e.g., extended alphabets or non-Latin scripts) exponentially increase the number of possible combinations, making brute-force attacks much less feasible.
 
-  #### Password length and character variety: 
-The results also confirm the importance of password length and the diversity of characters. Longer passwords combining uppercase, lowercase, numbers, and symbols are much more resistant to brute-force attacks, while short passwords or those based on a limited set of characters are much more vulnerable. Additionally, as the results show, the position of a password within the set of possible passwords during testing is relevant; for example, when using only numbers, passwords starting with 0 are weaker since the program tests these first. This confirms the objective of identifying which variables most influence password security.
+### ZIP Crypto Observations
+  ZIP Crypto can produce **password collisions**: different passwords may derive the same internal key, causing multiple passwords to successfully decrypt the same file.
+  This is due to its modified RC4 encryption and limited key space (2³² combinations). 
+  Example: a file with password `aF9m` could also be decrypted by `aaaH` during brute-force testing.
 
-  #### Alphabet complexity: 
-The tests highlighted the importance of the character set used. Larger and more complex sets, such as those in languages with extended alphabets or character systems like Japanese, exponentially increase the number of possible combinations, making brute-force attacks much less feasible.
+### Performance Across Machines
+- Personal laptop (sequential): ~8,000 combinations/second.
+- Laptop (6 parallel workers): ~4,500 combinations/second per worker.
+- Marenostrum 5 (75 workers): ~1,760 combinations/second per worker, but total throughput is much higher due to massive parallelization.
+- Confirms that large-scale parallelization compensates for lower individual worker speed.
 
-In summary, parallelization can significantly accelerate brute-force attacks, but factors such as length, complexity, and character set remain the most decisive for ensuring password security. These findings fulfill all the initial objectives of the study while also extending and deepening them.
+**Summary:** Parallelization accelerates brute-force attacks, but password length, complexity, and character set remain the most critical factors for security. ZIP Crypto’s internal key limitations can lead to multiple valid passwords for a single file, emphasizing the need for stronger encryption. All initial objectives were met, and additional insights on password collisions and parallelization efficiency were achieved.
 
-As future work, further analysis could explore the vulnerability of ZIP crypto encryption and optimal parallelization strategies to maximize brute-force efficiency.
+**Future Work:** Investigate ZIP crypto vulnerabilities in-depth and explore optimized parallelization strategies to maximize brute-force efficiency.
+
 
 ## How to Use the Scripts
-1. Download or copy the Python scripts from the `python_codes/` folder.
-2. Configure any parameters you want directly in the code (e.g., password length, character set, number of attempts).
-3. Run the script using Python.   
+
+1. Download or clone the repository.
+2. Configure parameters in the Python scripts (password length, character set, number of attempts, etc.).
+3. Run the scripts using Python 3.6 or higher.
 
 ## Prerequisites
 
-- Python 3.6 or higher
+Only standard library modules are required:
 
-No external Python libraries are required; all dependencies are from the standard library:
-- zipfile
-- itertools
-- string
-- multiprocessing
-- sys
-- datetime
-- os
+- `zipfile`
+- `itertools`
+- `string`
+- `multiprocessing`
+- `sys`
+- `datetime`
+- `os`
 
-You do not need to install any additional packages to run the provided scripts.
+No additional packages are needed.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
