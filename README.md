@@ -11,22 +11,17 @@ This repository contains the complete work of a research project investigating h
 
 The repository includes:
 
-- Final research document (`docs/` | `documents/`)
+- Final research document (`docs/`)
 - Python scripts for brute-force operations and combination counting (`python_codes/`)
-- Experimental datasets and tables with execution times and combinations per second (`data_tables/` | `taules_de_dades/`)
-- Example ZIP files used for testing (`used_zip_files/` | `arxius_zip_utilitzats/`)
+- Experimental datasets and tables with execution times and combinations per second (`data_tables/`)
+- Example ZIP files used for testing (`used_zip_files/`)
 
 ## Repository Structure
 
 - `python_codes/` Python scripts for experiments
-- `en`
-    - `data_tables/` Results of password cracking tests and other tables
-    - `docs/` Final research documents
-    - `used_zip_files/` Example ZIP files for testing
-- `cat` (same but in catalan)
-    - `taules_de_dades`
-    - `documents`
-    - `arxius_zip_utilitzats`
+- `data_tables/` Results of password cracking tests and other tables
+- `docs/` Final research documents
+- `used_zip_files/` Example ZIP files for testing
 
 ## Objectives
 
