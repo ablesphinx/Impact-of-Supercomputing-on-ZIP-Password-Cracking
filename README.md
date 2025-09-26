@@ -11,22 +11,17 @@ Aquest repositori conté el treball complet d’un projecte de recerca que inves
 
 El repositori inclou:
 
-- Document final de recerca (`docs/` | `documents/`)
-- Scripts en Python per a operacions de força bruta i recompte de combinacions (`python_codes/`)
+- Document final de recerca (`documents/`)
+- Scripts en Python per a operacions de força bruta i recompte de combinacions (`codis_de/`)
 - Datasets experimentals i taules amb temps d’execució i combinacions per segon (`data_tables/` | `taules_de_dades/`)
-- Fitxers ZIP d’exemple utilitzats per a proves (`used_zip_files/` | `arxius_zip_utilitzats/`)
+- Fitxers ZIP d’exemple utilitzats per a proves (`arxius_zip_utilitzats/`)
 
 ## Estructura del Repositori
 
 - `python_codes/` Scripts en Python per als experiments
-- `en`
-    - `data_tables/` Resultats de les proves de desxiframent i altres taules
-    - `docs/` Documents finals de recerca
-    - `used_zip_files/` Fitxers ZIP d’exemple per a proves
-- `cat` (el mateix però en català)
-    - `taules_de_dades`
-    - `documents`
-    - `arxius_zip_utilitzats`
+- `taules_de_dades` Resultats de les proves de desxiframent i altres taules
+- `documents` Documents finals de recerca
+- `arxius_zip_utilitzats` Fitxers ZIP d’exemple per a proves
 
 ## Objectius
 
