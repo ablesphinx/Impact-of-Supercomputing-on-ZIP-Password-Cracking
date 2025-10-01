@@ -1,6 +1,6 @@
 # Anàlisi de la Influència de la Supercomputació en el Desxiframent de Contrasenyes de Fitxers ZIP
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 
 ## Resum
 Aquest repositori conté el treball complet d’un projecte de recerca que investiga com la computació paral·lela i els recursos de supercomputació impacten en l’eficiència dels atacs de força bruta contra fitxers ZIP encriptats. L’estudi compara:
@@ -81,4 +81,4 @@ No cal instal·lar cap paquet addicional.
 
 ## Llicència
 
-Aquest projecte està sota la llicència MIT - vegeu el fitxer [LICENSE](LICENSE) per a més detalls.
+Aquest projecte està sota la llicència CC BY-NC-SA 4.0 - vegeu el fitxer [LICENSE](LICENSE) per a més detalls.
