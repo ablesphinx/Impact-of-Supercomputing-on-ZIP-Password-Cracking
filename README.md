@@ -1,6 +1,6 @@
 # Analysis of the Influence of Supercomputing on ZIP File Password Cracking
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 
 ## Overview
 This repository contains the complete work of a research project investigating how parallel computing and supercomputing resources impact the efficiency of brute-force attacks against encrypted ZIP files. The study compares:
