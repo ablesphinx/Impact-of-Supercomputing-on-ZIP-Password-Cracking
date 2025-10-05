@@ -53,7 +53,7 @@ Exemple: un fitxer amb la contrasenya `aF9m` també podria ser desxifrat amb `aa
 - Portàtil personal (seqüencial): ~8.000 combinacions/segon.  
 - Portàtil (6 workers en paral·lel): ~4.500 combinacions/segon per worker.  
 - MareNostrum 5 (75 workers): ~1.760 combinacions/segon per worker, però amb un rendiment total molt més alt gràcies a la paral·lelització massiva.  
-- Confirma que la paral·lelització a gran escala compensa la menor velocitat individual de cada worker.  
+- Confirma que la paral·lelització a gran escala compensa la disminució de velocita de cada worker per l'overhead.  
 
 **Resum:** La paral·lelització accelera els atacs de força bruta, però la longitud, la complexitat i el conjunt de caràcters de la contrasenya continuen essent els factors més crítics per a la seguretat. Les limitacions internes de claus de ZIP Crypto poden permetre múltiples contrasenyes vàlides per a un mateix fitxer, subratllant la necessitat d’un xifratge més robust. Tots els objectius inicials s’han assolit, i a més s’han obtingut coneixements addicionals sobre col·lisions de contrasenyes i eficiència de la paral·lelització.  
 
