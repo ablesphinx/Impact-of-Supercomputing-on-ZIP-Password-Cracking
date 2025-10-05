@@ -53,7 +53,7 @@ Larger and more complex character sets (e.g., extended alphabets or non-Latin sc
 - Personal laptop (sequential): ~8,000 combinations/second.
 - Laptop (6 parallel workers): ~4,500 combinations/second per worker.
 - Marenostrum 5 (75 workers): ~1,760 combinations/second per worker, but total throughput is much higher due to massive parallelization.
-- Confirms that large-scale parallelization compensates for lower individual worker speed.
+- Confirms that large-scale parallelization compensates the decrease of speed per worker due to overhead.
 
 **Summary:** Parallelization accelerates brute-force attacks, but password length, complexity, and character set remain the most critical factors for security. ZIP Crypto’s internal key limitations can lead to multiple valid passwords for a single file, emphasizing the need for stronger encryption. All initial objectives were met, and additional insights on password collisions and parallelization efficiency were achieved.
 
