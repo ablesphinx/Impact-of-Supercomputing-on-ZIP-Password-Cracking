@@ -33,7 +33,7 @@ El repositori inclou:
 
 ### Paral·lelització
 La paral·lelització millora significativament el rendiment dels atacs de força bruta. Encara que la velocitat individual de cada worker disminueix en augmentar-ne el nombre, el rendiment total creix de manera notable.  
-Això demostra escalabilitat, permetent atacs més ràpids sobre contrasenyes complexes quan s’utilitzen recursos massius de computació paral·lela com el MareNostrum 5 (accés restringit a usuaris autoritzats).
+Això demostra escalabilitat, permetent atacs més ràpids sobre contrasenyes complexes quan s’utilitzen recursos massius de computació paral·lela com el MareNostrum 5 
 
 ### Longitud i Varietat de Contrasenyes
 - Les contrasenyes més llargues que combinen majúscules, minúscules, números i símbols són molt més resistents als atacs de força bruta.  
