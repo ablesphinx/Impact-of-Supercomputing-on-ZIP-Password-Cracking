@@ -3,7 +3,7 @@
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 
 ## Resum
-Aquest repositori conté el treball complet d’un projecte de recerca que investiga com la computació paral·lela i els recursos de supercomputació impacten en l’eficiència dels atacs de força bruta contra fitxers ZIP encriptats. L’estudi compara:
+Aquest repositori conté el treball complet d’un projecte de recerca que investiga com la computació paral·lela i els recursos de supercomputació impacten en l’eficiència dels atacs de força bruta contra fitxers ZIP encriptats (ZipCrypto). L’estudi compara:
 
 - Execució seqüencial
 - Paral·lelització amb nuclis limitats en un ordinador personal
