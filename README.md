@@ -45,9 +45,7 @@ This demonstrates scalability, allowing faster attacks on complex passwords when
 Larger and more complex character sets (e.g., extended alphabets or non-Latin scripts) exponentially increase the number of possible combinations, making brute-force attacks much less feasible.
 
 ### ZIP Crypto Observations
-  ZIP Crypto can produce **password collisions**: different passwords may derive the same internal key, causing multiple passwords to successfully decrypt the same file.
-  This is due to its modified RC4 encryption and limited key space (2³² combinations). 
-  Example: a file with password `aF9m` could also be decrypted by `aaaH` during brute-force testing.
+ZIP Crypto can produce password collisions: different passwords may be accepted as correct for the same file even though only one of them is the original password. This occurs because the verification process uses very limited information, checking only a single byte of the encrypted header against the file’s CRC value. As a result, some incorrect passwords may pass the check by coincidence during brute-force attacks. Statistically, about 1 in 256 passwords may be accepted as valid due to this single-byte verification. Example: The file with password aF9m also appears to be decrypted by aaaH during brute-force testing.
 
 ### Performance Across Machines
 - Personal laptop (sequential): ~8,000 combinations/second.
