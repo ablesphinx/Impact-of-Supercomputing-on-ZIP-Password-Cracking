@@ -45,9 +45,9 @@ Això demostra escalabilitat, permetent atacs més ràpids sobre contrasenyes co
 Conjunts de caràcters més grans i complexos (per exemple, alfabets ampliats o escriptures no llatines) incrementen exponencialment el nombre de combinacions possibles, fent que els atacs de força bruta siguin molt menys factibles.
 
 ### Observacions sobre ZIP Crypto
-El ZIP Crypto pot produir **col·lisions de contrasenyes**: contrasenyes diferents poden generar la mateixa clau interna, permetent desxifrar el mateix fitxer amb diverses contrasenyes.  
-Això es deu al seu xifratge RC4 modificat i a l’espai de claus limitat (2³² combinacions).  
-Exemple: un fitxer amb la contrasenya `aF9m` també podria ser desxifrat amb `aaaH` durant les proves de força bruta.  
+ZIP Crypto pot produir col·lisions de contrasenyes: contrasenyes diferents poden ser acceptades com a correctes per al mateix fitxer, permetent desxifrar-lo aparentment amb diverses contrasenyes.
+Això es deu al fet que el seu procés de verificació utilitza molt poca informació, ja que només comprova un únic byte de la capçalera xifrada en comparació amb un byte del CRC del fitxer.
+Exemple: un fitxer amb la contrasenya aF9m també podria aparèixer com a desxifrat amb aaaH durant les proves de força bruta.  
 
 ### Rendiment entre Màquines
 - Portàtil personal (seqüencial): ~8.000 combinacions/segon.  
