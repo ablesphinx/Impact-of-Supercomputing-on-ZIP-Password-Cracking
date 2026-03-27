@@ -3,7 +3,7 @@
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 
 ## Overview
-This repository contains the complete work of a research project investigating how parallel computing and supercomputing resources impact the efficiency of brute-force attacks against encrypted ZIP files. The study compares:
+This repository contains the complete work of a research project investigating how parallel computing and supercomputing resources impact the efficiency of brute-force attacks against encrypted ZIP files (ZipCrypto). The study compares:
 
 - Sequential execution
 - Limited-core parallelization on a personal computer
